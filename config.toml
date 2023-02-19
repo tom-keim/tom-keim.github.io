@@ -68,7 +68,7 @@ enable = true
 gravatarEmail = ""
 # Overwritten by your gravatar image if `gravatarEmail` is filled
 avatar = "img/me.jpg"
-bio = "A blog about mine experiences as data engineer"
+bio = "A blog about my experiences as data engineer"
 
 [params.social]
 twitter = "TomKeimData"
