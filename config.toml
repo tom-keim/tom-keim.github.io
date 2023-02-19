@@ -1,0 +1,82 @@
+baseURL = "https://tomkeim.nl"
+title = "Tom's Blog"
+
+#theme = "puppet"
+
+copyright = ""
+paginate = 3
+languageCode = "en"
+defaultContentLanguage = "en"
+
+hasCJKLanguage = true
+enableInlineShortcodes = true
+enableEmoji = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+disqusShortname = ""
+googleAnalytics = ""
+
+[outputs]
+home = ["HTML", "JSON", "RSS"]
+
+# prevent build failures when using Hugo's template _internal/opengraph.html 
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[markup]
+[markup.highlight]
+noClasses = true
+codeFences = true
+guessSyntax = true
+lineNos = true
+lineNumbersInTable = false
+style = "dracula"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[menu]
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = -100
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about"
+weight = 50
+
+[params]
+author = "Tom Keim"
+description = "A blog about mine experiences as data engineer"
+keywords = "blog,data,data engineer"
+img_home = "img/front-banner.jpg"
+img_404 = "img/404.jpg"
+
+useFaviconGenerator = true
+
+custom_js = []
+custom_css = [] # ["css/custom.css"]  Add your file to assets folder  [assets/css/custom.css]
+
+[params.sidebar]
+enable = true
+gravatarEmail = ""
+# Overwritten by your gravatar image if `gravatarEmail` is filled
+avatar = "img/me.jpg"
+bio = "A blog about mine experiences as data engineer"
+
+[params.social]
+twitter = "TomKeimData"
+github = "tom-keim"
+linkedin = "tomkeim"
+rss = true
+
+
+[module]
+[[module.imports]]
+  path = 'github.com/roninro/hugo-theme-puppet'
